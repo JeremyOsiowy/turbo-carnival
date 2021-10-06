@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Erin</title>
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+<section class="homepage">
+
+
+
+
+
+<!-- <button id="matt" type="button" class="btn btn-lg btn-danger" name="button">Click me </button> -->
+  <div id="type_text"></div>
+<script>
+
+var myText = '0100010101110010011010010110111000001010'+
+"\n" +"0110100100100000011011000110111101110110"+
+"\n" +"0110010100100000011110010110111101110101"+
+"\n" +"0010110000100000011001100110111101110010"+
+"\n" +"0110010101110110011001010111001000100000"+
+"\n" +"0110000101101110011001000010000001100001"+
+"\n" +"0110110001110111011000010111100100001010"+
+"\n" +"1011011001110010011000101001110101101110"+
+"\n" +"0110010100111010110100010011001110110101"+
+"\n" +"100101101010001010111 WILL YOU MARRY ME?"
+;
+var myArray = myText.split("");
+var loopTimer;
+function frameLooper() {
+if(myArray.length > 0) {
+document.getElementById("type_text").innerHTML += myArray.shift();
+} else {
+clearTimeout(loopTimer);
+return false;
+}
+loopTimer = setTimeout('frameLooper()',111);
+}
+frameLooper();
+
+
+</script>
+
+</section>
+</body>
+</html>
